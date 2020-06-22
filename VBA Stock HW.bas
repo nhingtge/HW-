@@ -108,7 +108,7 @@ For Each ws In Worksheets
 '---------------------------------------------------------------------------------------
 'greatest volume loop
     
-    For i = 2 To x
+    For i = 2 To last_row
     
         If ws.Cells(i, 11).Value > greatest_total_volume Then
             greatest_total_volume = ws.Cells(i, 11).Value
@@ -135,7 +135,7 @@ For Each ws In Worksheets
 '---------------------------------------------------------------------------------------
 'greatest % increase/decrease loop
     
-    For i = 2 To x
+    For i = 2 To last_row
     
         'loop through % change to find greatest increase or decrease
         If ws.Cells(i, 10).Value > percent_increase Then
